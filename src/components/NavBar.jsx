@@ -1,14 +1,19 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
-import '../stylesheets/nav.css';
-import NavBarItem from './NavBarItem';
+import { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+import "../stylesheets/nav.css";
+import NavBarItem from "./NavBarItem";
 const NavBar = () => {
   const { theme, items, dispatch } = useContext(ThemeContext);
-  const themeClass = theme.isLight ? 'light' : 'darker';
+  const themeClass = theme.isLight ? "light" : "darker";
   return (
     <nav>
-      <div className={themeClass + ' topnav'} id="myTopnav">
-        <div className="logo">
+      <div className={themeClass + " topnav"} id="myTopnav">
+        <div
+          className="logo"
+          onClick={(event) =>
+            dispatch({ type: "IS_ACTIVE", event, elem: "#home" })
+          }
+        >
           <span>clothing </span>App
         </div>
         <div className="menu">
@@ -16,9 +21,8 @@ const NavBar = () => {
             <NavBarItem key={item.value} item={item} />
           ))}
           <div
-            href="#"
             className="navBtn"
-            onClick={() => dispatch({ type: 'DISPLAY_NAV' })}
+            onClick={() => dispatch({ type: "DISPLAY_NAV" })}
           >
             <i className="bars icon responsive-btn"></i>
           </div>

@@ -1,7 +1,7 @@
-import '../../stylesheets/infos.css';
+import "../../stylesheets/infos.css";
 const Infos = () => {
   return (
-    <div id="useful-links" className="footer-infos grid">
+    <div id="links" className="footer-infos grid">
       <div>
         <h3>Finance Business</h3>
         <p>
