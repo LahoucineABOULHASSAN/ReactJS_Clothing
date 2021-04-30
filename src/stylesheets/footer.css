@@ -1,0 +1,22 @@
+footer .details.grid {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  grid-template-columns: 3fr 1fr;
+}
+footer .copyrights {
+  width: 100%;
+  text-align: center;
+  background: var(--lightTransparence);
+  padding: 1rem;
+}
+footer span {
+  text-transform: uppercase;
+}
+footer span span {
+  color: var(--primary);
+}
+@media screen and (max-width: 768px) {
+  footer .details.grid {
+    grid-template-columns: 1fr;
+  }
+}

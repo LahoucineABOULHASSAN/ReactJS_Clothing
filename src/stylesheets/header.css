@@ -1,0 +1,93 @@
+#landing-header {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  background: #00000094;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  text-transform: uppercase;
+}
+#landing-header h1 {
+  font-size: 2.3rem;
+  color: var(--lighter);
+}
+#landing-header h2 {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+.slideshow {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slideshow li {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+.slideshow li:nth-child(1) {
+  background-image: url('https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?cs=srgb&dl=pexels-freestocksorg-291762.jpg&fm=jpg');
+}
+.slideshow li:nth-child(2) {
+  background-image: url('https://images.unsplash.com/photo-1573855619003-97b4799dcd8b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url('https://images.unsplash.com/photo-1588286492514-ddb61b527086?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url('https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url('https://images.unsplash.com/photo-1529873597343-8dd8429aa148?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+  animation-delay: 40s;
+}
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+.no-cssanimations .slideshow li {
+  opacity: 1;
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* #landing-header {
+    height: calc(100vh - 145px);
+  } */
+  header #landing-header h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  header #landing-header h1 {
+    font-size: 1.7rem;
+  }
+}

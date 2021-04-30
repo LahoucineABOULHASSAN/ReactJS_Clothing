@@ -1,0 +1,40 @@
+/* Custom Style */
+#about-us .grid {
+  line-height: 1.6;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bluer);
+}
+#about-us .grid h3 {
+  color: var(--blue);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+#about-us .grid p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+#about-us .grid ul {
+  font-size: 0.9rem;
+  list-style: circle inside;
+  margin-bottom: 1rem;
+}
+#about-us .grid div button {
+  font-size: 0.9rem;
+  color: var(--lighter);
+  padding: 0.7rem 1rem;
+  background: var(--primary);
+  border: none;
+  border-radius: 5px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 500px) {
+  #about-us .grid {
+    grid-template-columns: 1fr;
+  }
+  #about-us .headline {
+    font-size: 1rem;
+  }
+}

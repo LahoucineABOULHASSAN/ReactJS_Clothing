@@ -1,0 +1,28 @@
+.footer-infos.grid {
+  text-align: left;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-infos h3 {
+  margin-bottom: 1.5rem;
+}
+.footer-infos li {
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+.footer-infos li:hover {
+  color: var(--primary);
+}
+.footer-infos ul.icons {
+  margin-top: 1rem;
+}
+.footer-infos li.icon-item {
+  display: inline-block;
+  color: var(--primary);
+}
+/* Media Queries */
+@media screen and (max-width: 500px) {
+  .footer-infos.grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
