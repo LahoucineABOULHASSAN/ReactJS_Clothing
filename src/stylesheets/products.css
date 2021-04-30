@@ -18,31 +18,20 @@
   font-weight: 500;
   padding: 1rem;
 }
-#our-products .grid div .details p,
-#our-products .grid div .details span {
-  padding-bottom: 1rem;
+#our-products .grid div .details > * {
+  padding-bottom: 0.7rem;
 }
-#our-products .grid div .details .product-name {
+#our-products .grid div .details .product-name,
+#our-products .grid div .details .product-rating {
   color: var(--blue);
-  float: left;
-}
-#our-products .grid div .details .product-price {
-  float: right;
 }
 #our-products .grid div .details .product-desc {
-  clear: both;
   font-weight: 300;
   text-align: justify;
 }
 #our-products .grid div .details .product-reviews {
   color: var(--primary);
-  float: left;
 }
-#our-products .grid div .details .product-rating {
-  color: var(--primary);
-  float: right;
-}
-
 /* Media Queries */
 @media screen and (max-width: 768px) {
   #our-products .grid {

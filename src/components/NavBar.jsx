@@ -7,7 +7,7 @@ const NavBar = () => {
   const themeClass = theme.isLight ? "light" : "darker";
   return (
     <nav>
-      <div className={themeClass + " topnav"} id="myTopnav">
+      <div className={themeClass + " topnav flex flex-row"} id="myTopnav">
         <div
           className="logo"
           onClick={(event) =>
