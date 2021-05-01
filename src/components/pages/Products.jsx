@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Product from "./Product.jsx";
 import "../../stylesheets/products.css";
 import { ProductContext } from "../../contexts/ProductContext.jsx";
 import Axios from "axios";
 const Products = () => {
   const { products, setProducts } = useContext(ProductContext);
+  const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     const url =
       "https://raw.githubusercontent.com/LahoucineABOULHASSAN/json_files/main/products.json";
@@ -18,14 +19,26 @@ const Products = () => {
     <section id="our-products" data-aos="flip-right">
       <p className="headline flex flex-row">
         Latest Products
-        <span>
-          VIEW ALL PRODUCTS <i className="chevron right icon"></i>
-        </span>
+        <div onClick={() => setShowAll(!showAll)}>
+          {showAll ? (
+            <span>
+              SHOW LESS PRODUCTS<i className="chevron left icon"></i>
+            </span>
+          ) : (
+            <span>
+              SHOW ALL PRODUCTS<i className="chevron right icon"></i>
+            </span>
+          )}
+        </div>
       </p>
       <div className="grid">
-        {products.map((product) => (
-          <Product key={product.id} product={product} />
-        ))}
+        {showAll
+          ? products.map((product) => (
+              <Product key={product.id} product={product} />
+            ))
+          : products
+              .slice(0, 8)
+              .map((product) => <Product key={product.id} product={product} />)}
       </div>
     </section>
   );
