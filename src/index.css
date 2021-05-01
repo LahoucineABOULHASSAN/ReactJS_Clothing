@@ -119,6 +119,23 @@ section {
   flex-direction: column;
   vertical-align: middle;
 }
+#error {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#error h1 {
+  font-size: 2rem;
+  word-spacing: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+.error {
+  padding: 2rem;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  background: #e28c9cbf;
+}
 /* media queries */
 @media screen and (min-width: 1171px) {
   section {
