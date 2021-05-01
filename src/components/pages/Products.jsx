@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Product from "./Product.jsx";
+import Loading from "../Loading.jsx";
 import Error from "../Error.jsx";
 import "../../stylesheets/products.css";
 import { ProductContext } from "../../contexts/ProductContext.jsx";
@@ -61,8 +62,9 @@ const Products = () => {
           </div>
         </div>
       ) : (
-        <Error error={error} />
+        !error && <Loading error={error} />
       )}
+      {error && <Error error={error} />}
     </section>
   );
 };
