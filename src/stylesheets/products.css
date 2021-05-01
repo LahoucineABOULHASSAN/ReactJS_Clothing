@@ -1,7 +1,4 @@
 .headline span {
-  float: right;
-}
-.headline span a {
   color: var(--primary);
   font-size: 0.8rem;
   text-decoration: none;
