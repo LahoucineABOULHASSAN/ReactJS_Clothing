@@ -24,7 +24,7 @@ To use and test the app on your pc or mac make sure you follow the instructions 
 
 ## links
 
-[my portfolio](https://vueportfolioapp.netlify.app).
+[my portfolio](https://aboulhassan.netlify.app/).
 [my github](https://github.com/LahoucineABOULHASSAN).
 [image](https://images.unsplash.com/).
 
